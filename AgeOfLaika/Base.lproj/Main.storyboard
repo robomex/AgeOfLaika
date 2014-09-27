@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDn-sq-z8d">
@@ -52,6 +52,19 @@
                                     <rect key="frame" x="0.0" y="252" width="320" height="316"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-Zb-ekS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.29352432575230758" green="1" blue="0.40812008608258932" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="A Better Conversion">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="176" width="171" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="betterConvertButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a5u-Xz-sfn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -60,6 +73,7 @@
                                 <exclude reference="Zwe-dz-SUI"/>
                                 <exclude reference="O01-N0-VJK"/>
                                 <exclude reference="nAm-hb-H10"/>
+                                <exclude reference="WKt-Zb-ekS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -68,12 +82,14 @@
                                 <include reference="Zwe-dz-SUI"/>
                                 <include reference="O01-N0-VJK"/>
                                 <include reference="nAm-hb-H10"/>
+                                <include reference="WKt-Zb-ekS"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="betterConvertButton" destination="WKt-Zb-ekS" id="8SS-TF-ADw"/>
                         <outlet property="convertButton" destination="O01-N0-VJK" id="YXb-0M-ZN5"/>
                         <outlet property="dogYearsLabel" destination="IDn-sq-z8d" id="Mpg-gd-u5G"/>
                         <outlet property="humanYearsTextField" destination="Zwe-dz-SUI" id="FOY-fX-8bK"/>
